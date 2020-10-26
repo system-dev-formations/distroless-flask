@@ -1,5 +1,6 @@
 FROM python:2.7-slim AS build
 ADD . /app
+COPY requirements.txt /
 WORKDIR /app
 RUN pip install --upgrade pip
 RUN pip install -r ./requirements.txt
