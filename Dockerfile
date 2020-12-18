@@ -11,4 +11,4 @@ COPY --from=build /usr/local/lib/python3.9/site-packages /usr/local/lib/python3.
 WORKDIR /app
 ENV PYTHONPATH=/usr/local/lib/python3.9/site-packages
 EXPOSE 5000
-CMD ["app.py"]
+ENTRYPOINT FLASK_APP=/app/app.py flask run --host=0.0.0.0
